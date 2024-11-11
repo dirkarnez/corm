@@ -7,6 +7,7 @@ struct book{
    int pages;
 };
 
+// the key idea is use an array to hold the strings. since corm depends on code-generation, #define should not be used and this array should have predefined size
 char arr[3][10] = {"title", "price", "pages"};
 
 // book_equal should be a proxy
