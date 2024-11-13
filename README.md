@@ -2,6 +2,8 @@ corm
 ====
 ### TODOs
 - [ ] memory issue
+  - [ ] use string builder facilities
+- [ ] Code generator (in python)
 - [ ] demonstration
   - mariadb
   - baremetal environment
