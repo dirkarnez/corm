@@ -26,17 +26,13 @@ unsigned int types[] = {
 
 // Enum-like structure to define the fields by name
 typedef struct {
-    unsigned int title; // Index for title
-    unsigned int price; // Index for price
-    unsigned int pages; // Index for pages
+    enum book_fields_enum { 
+        title = 0, 
+        price = 1,
+        pages = 2
+    } field; // Index for pages
 } book_equal_t;
 
-// Initialize the field index mapping
-book_equal_t book_equal = {
-    .title = 0,
-    .price = 1,
-    .pages = 2
-};
 
 // Union to hold either an integer or a string value
 union ValueBox {
@@ -44,8 +40,11 @@ union ValueBox {
     char* string_value; // For string types
 };
 
+// void a (book_equal_t_wrapper b) {
+//     printf(b.field.title)
+// }
 // Function to simulate a database query for a book, based on a field index and value
-struct book* db_select_book(unsigned int field_index, union ValueBox* box) {
+struct book* db_select_book(book_equal_t* field_index_struct, union ValueBox* box) {
     static unsigned int base = 0; // Base index for the fields
     static unsigned int fields_count = 3; // Total number of fields
     static char* table_name = "books"; // Name of the table
@@ -54,7 +53,7 @@ struct book* db_select_book(unsigned int field_index, union ValueBox* box) {
     char value_buffer[100];
 
     // Check if the field is a string or an integer
-    if (types[base + field_index] == 9) {
+    if (types[base + field_index_struct->field] == 9) {
         // If it's a string, format it accordingly
         sprintf(value_buffer, "`%s`", box->string_value);
     } else {
@@ -63,7 +62,7 @@ struct book* db_select_book(unsigned int field_index, union ValueBox* box) {
     }
 
     // Print the simulated SQL query
-    printf("select * from `%s` where `%s` = %s\n", table_name, myArray[base + field_index], value_buffer);
+    printf("select * from `%s` where `%s` = %s\n", table_name, myArray[base + field_index_struct->field], value_buffer);
     return NULL; // In a real implementation, this would return a pointer to the result
 }
 
@@ -72,15 +71,15 @@ int main() {
     // Create a book instance with specific values
     struct book b1 = {"Learn C", 675.50, 325};
 
-    // Create a ValueBox for a string value (title)
-    union ValueBox box_1 = { .string_value = "123" }; 
-    // Simulate a database query for the title field
-    struct book *strptr_1 = db_select_book(book_equal.title, &box_1);
+    struct book *strptr_1 = db_select_book(
+        &(book_equal_t){ .field = title }, 
+        &(union ValueBox){ .string_value = "123" }
+    );
 
-    // Create a ValueBox for an integer value (price)
-    union ValueBox box_2 = { .integer_value = 123 }; 
     // Simulate a database query for the price field
-    struct book *strptr_2 = db_select_book(book_equal.price, &box_2);
+    struct book *strptr_2 = db_select_book(
+        &(book_equal_t){ .field = price }, 
+        &(union ValueBox){ .integer_value = 123 });
 
     return 0; // End of the program
 }
