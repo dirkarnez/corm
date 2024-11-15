@@ -10,4 +10,4 @@ corm
 - [ ] demonstration
   - mariadb using [dirkarnez/mariadb-connector-c-prebuilt](https://github.com/dirkarnez/mariadb-connector-c-prebuilt)
   - baremetal environment
-
+- [ ] **Use private interface to hide magic number inside structs, eg same struct different values for generic programming**
