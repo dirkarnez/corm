@@ -10,4 +10,15 @@ corm
 - [ ] demonstration
   - mariadb using [dirkarnez/mariadb-connector-c-prebuilt](https://github.com/dirkarnez/mariadb-connector-c-prebuilt)
   - baremetal environment
-- [ ] **Use private interface to hide magic number inside structs, eg same struct different values for generic programming**
+- [ ] **May use private interface to hide magic number inside structs, eg same struct different values for generic programming**
+- [ ] .rodata
+  - ```c
+    struct SIMPLE
+    {
+        int a;
+        char b;
+        double c;
+    };
+    
+    static volatile const struct SIMPLE a = {};
+    ```
