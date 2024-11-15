@@ -34,10 +34,16 @@ typedef struct {
 } book_equal_t;
 
 
+typedef struct  {
+    char* ptr;
+    unsigned int length;
+} string_ptr_value_t; // Struct as a member of the union
+
 // Union to hold either an integer or a string value
 union ValueBox {
     int integer_value;  // For integer types
-    char* string_value; // For string types
+    string_ptr_value_t  string_ptr_value;
+    char* string_literal_value;
 };
 
 // void a (book_equal_t_wrapper b) {
@@ -55,7 +61,7 @@ struct book* db_select_book(book_equal_t* field_index_struct, union ValueBox* bo
     // Check if the field is a string or an integer
     if (types[base + field_index_struct->field] == 9) {
         // If it's a string, format it accordingly
-        sprintf(value_buffer, "`%s`", box->string_value);
+        sprintf(value_buffer, "`%s`", box->string_literal_value);
     } else {
         // If it's an integer, format it as an integer
         sprintf(value_buffer, "%d", box->integer_value);
@@ -73,13 +79,20 @@ int main() {
 
     struct book *strptr_1 = db_select_book(
         &(book_equal_t){ .field = title }, 
-        &(union ValueBox){ .string_value = "123" }
+        &(union ValueBox){ .string_literal_value = "123" }
     );
 
     // Simulate a database query for the price field
     struct book *strptr_2 = db_select_book(
         &(book_equal_t){ .field = price }, 
         &(union ValueBox){ .integer_value = 123 });
+
+    char buffer[] = "12345";
+
+    struct book *strptr_3 = db_select_book(
+        &(book_equal_t){ .field = title }, 
+        &(union ValueBox){ .string_ptr_value = (string_ptr_value_t){ .ptr = buffer, .length = sizeof(buffer) } }
+    );
 
     return 0; // End of the program
 }
