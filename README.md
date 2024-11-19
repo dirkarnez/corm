@@ -13,6 +13,8 @@ corm
 - [ ] nice interface
   - do not use `union` to store generic value, instead, generate multiple functions for each type
 - [ ] **May use private interface to hide magic number inside structs, eg same struct different values for generic programming**
+- [ ] builder pattern (reference to libcurl example code)
+  - [dirkarnez/c-builder-pattern](https://github.com/dirkarnez/c-builder-pattern)
 - [ ] .rodata
   - ```c
     struct SIMPLE
