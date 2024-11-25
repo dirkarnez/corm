@@ -16,7 +16,7 @@ corm
 - [ ] [SOCI (master)](https://soci.sourceforge.net/doc/master/)
 - [ ] builder pattern (reference to libcurl example code)
   - [dirkarnez/c-builder-pattern](https://github.com/dirkarnez/c-builder-pattern)
-- [ ] .rodata
+- [ ] .rodata (must corm must check in pe / elf / mach-o viewer)
   - ```c
     struct SIMPLE
     {
