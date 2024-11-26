@@ -77,6 +77,10 @@ int main() {
     // Create a book instance with specific values
     struct book b1 = {"Learn C", 675.50, 325};
 
+    // select_books(db, one filter function)
+    // Or(list of filter function) is one filter function
+    // And(list of filter function) is one filter function
+    
     struct book *strptr_1 = db_select_book(
         &(book_equal_t){ .field = title }, 
         &(union ValueBox){ .string_literal_value = "123" }
