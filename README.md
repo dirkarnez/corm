@@ -16,6 +16,8 @@ corm
 - [ ] [SOCI (master)](https://soci.sourceforge.net/doc/master/)
 - [ ] builder pattern (reference to libcurl example code)
   - [dirkarnez/c-builder-pattern](https://github.com/dirkarnez/c-builder-pattern)
+- [ ] adapters for db dialects
+  - [mysql 预处理stmt操作（写入数据库和从数据库中取出）-CSDN博客](https://blog.csdn.net/v6543210/article/details/103220593) 
 - [ ] .rodata (must corm must check in pe / elf / mach-o viewer)
   - ```c
     struct SIMPLE
