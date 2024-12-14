@@ -3,7 +3,8 @@ corm
 ### TODOs
 - [ ] memory issue
   - [ ] use string builder facilities
-    - https://github.com/maxim2266/str 
+    - https://github.com/maxim2266/str
+- [ ] [FreshRSS/lib/Minz/ModelPdo.php at edge · FreshRSS/FreshRSS](https://github.com/FreshRSS/FreshRSS/blob/edge/lib/Minz/ModelPdo.php)
 - [ ] Code generator (in python)
   - https://github.com/dirkarnez/tbuild/tree/main/examples/codegen
     - [ ] generate dry-run / assertion for compilation (as C does not support static assertion on `const`) 
