@@ -31,6 +31,16 @@ corm
     
     static volatile const struct SIMPLE a = {};
     ```
+  - [ ] lookup array
+    - ```c
+      https://github.com/openjdk/loom/blob/fibers/src/java.base/windows/native/libnio/MappedMemoryUtils.c
+      static JNINativeMethod methods[] = {
+          {"isLoaded0", "(JJJ)Z",             (void *)&MappedMemoryUtils_isLoaded0},
+          {"load0",     "(JJ)V",              (void *)&MappedMemoryUtils_load0},
+          {"unload0",   "(JJ)V",              (void *)&MappedMemoryUtils_unload0},
+          {"force0",    "(" FD "JJ)V",        (void *)&MappedMemoryUtils_force0},
+      };
+      ``` 
   - [ ] offset
     - ```c
       #include <stddef.h>
