@@ -100,3 +100,31 @@ int main() {
 
     return 0; // End of the program
 }
+
+```
+int string_get_size(u64 size, u64 blk_size, const enum string_size_units units,
+		    char *buf, int len)
+{
+	enum string_size_units units_base = units & STRING_UNITS_MASK;
+	static const char *const units_10[] = {
+		"", "k", "M", "G", "T", "P", "E", "Z", "Y",
+	};
+	static const char *const units_2[] = {
+		"", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi", "Yi",
+	};
+	static const char *const *const units_str[] = {
+		[STRING_UNITS_10] = units_10,
+		[STRING_UNITS_2] = units_2,
+	};
+	static const unsigned int divisor[] = {
+		[STRING_UNITS_10] = 1000,
+		[STRING_UNITS_2] = 1024,
+	};
+	static const unsigned int rounding[] = { 500, 50, 5 };
+	int i = 0, j;
+	u32 remainder = 0, sf_cap;
+	char tmp[12];
+	const char *unit;
+
+	tmp[0] = '\0';
+```
