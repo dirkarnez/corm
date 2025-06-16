@@ -4,6 +4,8 @@ corm
 - [ ] memory issue
   - [ ] use string builder facilities
     - https://github.com/maxim2266/str
+- [ ] Builder pattern
+  - [Abusing Go Syntax to Create a Domain-Specific Language | Gopher Academy Blog](https://blog.gopheracademy.com/advent-2016/go-syntax-for-dsls/)
 - [ ] [FreshRSS/lib/Minz/ModelPdo.php at edge · FreshRSS/FreshRSS](https://github.com/FreshRSS/FreshRSS/blob/edge/lib/Minz/ModelPdo.php)
 - [ ] Code generator (in python)
   - https://github.com/dirkarnez/tbuild/tree/main/examples/codegen
