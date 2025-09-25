@@ -22,6 +22,8 @@ corm
 - [ ] adapters for db dialects
   - [mysql 预处理stmt操作（写入数据库和从数据库中取出）-CSDN博客](https://blog.csdn.net/v6543210/article/details/103220593)
 - [ ] adapter for plain prepared statement generation
+- [ ] https://github.com/kataras/iris/blob/main/_examples/database/mysql/entity/product.go
+- [ ] [dirkarnez/go-mariadb-no-orm](https://github.com/dirkarnez/go-mariadb-no-orm)
 - [ ] .rodata (must corm must check in pe / elf / mach-o viewer)
   - ```c
     struct SIMPLE
