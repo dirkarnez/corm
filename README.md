@@ -70,3 +70,5 @@ corm
          return(0);
       }
       ```
+### Reference
+- [uptrace/bun: SQL-first Golang ORM](https://github.com/uptrace/bun)
