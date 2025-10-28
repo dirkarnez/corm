@@ -23,5 +23,9 @@ int main() {
     /* container = */book_group_by(book_name/*,  other fields */);
     /* container = */book_order_by_ascending(book_name);
     /* container.*/run();
+    /*
+    the container has the fields specified in `book_select`, so it returns an array of entity, 
+    eneity should not be struct, but container, so we can get data / field names / property name by generated functions
+    */
     return 0;
 }
