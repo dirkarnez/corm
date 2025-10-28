@@ -15,10 +15,13 @@ int select_book(B *b) {
 #define bookname (&(B){.func_ptr = sum})
 
 int main() {
-
-    select_book(bookname);
-    select_book(bookname);
-    select_book_where();
-    select_book_run();
+    // SELECT CustName, State, COUNT(*) AS ‘No. of Orders’ FROM `Order` GROUP BY State, CustName HAVING COUNT(*)>1 ORDER BY CustName;
+    /* container = */book_select(bookname);
+    /* container = */book_select(/* expression*/);
+    /* container = */book_where(/*ast-like object*/);
+    /* container = */book_having(bookname);
+    /* container = */book_group_by(bookname/*,  other fields */);
+    /* container = */book_order_by_ascending(bookname);
+    /* container.*/run();
     return 0;
 }
