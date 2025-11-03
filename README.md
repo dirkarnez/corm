@@ -9,7 +9,9 @@ corm
 - [ ] [FreshRSS/lib/Minz/ModelPdo.php at edge · FreshRSS/FreshRSS](https://github.com/FreshRSS/FreshRSS/blob/edge/lib/Minz/ModelPdo.php)
 - [ ] Code generator (in python)
   - https://github.com/dirkarnez/tbuild/tree/main/examples/codegen
-    - [ ] generate dry-run / assertion for compilation (as C does not support static assertion on `const`) 
+    - [ ] generate dry-run / assertion for compilation (as C does not support static assertion on `const`)
+    - [ ] data types
+      - https://html.spec.whatwg.org/multipage/input.html
 - [ ] demonstration
   - mariadb using [dirkarnez/mariadb-connector-c-prebuilt](https://github.com/dirkarnez/mariadb-connector-c-prebuilt)
   - baremetal environment
