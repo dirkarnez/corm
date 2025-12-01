@@ -14,6 +14,7 @@ corm
     - [ ] generate dry-run / assertion for compilation (as C does not support static assertion on `const`)
     - [ ] data types
       - https://html.spec.whatwg.org/multipage/input.html
+    - [CG/SQL | CG/SQL](https://cgsql.dev/)
 - [ ] demonstration
   - mariadb using [dirkarnez/mariadb-connector-c-prebuilt](https://github.com/dirkarnez/mariadb-connector-c-prebuilt)
   - baremetal environment
