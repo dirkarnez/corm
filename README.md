@@ -29,6 +29,7 @@ corm
 - [ ] adapter for plain prepared statement generation
 - [ ] https://github.com/kataras/iris/blob/main/_examples/database/mysql/entity/product.go
 - [ ] [dirkarnez/go-mariadb-no-orm](https://github.com/dirkarnez/go-mariadb-no-orm)
+- [ ] [Drizzle ORM - next gen TypeScript ORM.](https://orm.drizzle.team/)
 - [ ] .rodata (must corm must check in pe / elf / mach-o viewer)
   - ```c
     struct SIMPLE
