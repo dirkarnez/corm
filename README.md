@@ -125,3 +125,6 @@ corm
       ```
 ### Reference
 - [uptrace/bun: SQL-first Golang ORM](https://github.com/uptrace/bun)
+
+
+<!-- Security scan triggered at 2026-09-15 09:37:38 -->
