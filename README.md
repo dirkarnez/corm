@@ -125,6 +125,7 @@ corm
       ```
 ### Reference
 - [uptrace/bun: SQL-first Golang ORM](https://github.com/uptrace/bun)
+- [Chapter 26. Boost.PFR 2.4](https://www.boost.org/doc/libs/latest/doc/html/boost_pfr.html)
 
 
 <!-- Security scan triggered at 2026-09-15 09:37:38 -->
